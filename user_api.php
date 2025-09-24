@@ -58,10 +58,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
             unset($user['password']); // Don't send password back
             send_response(true, 'Login successful.', $user);
         } else {
-            send_response(false, 'Invalid password.');
+            send_response(false, 'Incorrect password or email.');
         }
     } else {
-        send_response(false, 'No account found with that email.');
+        send_response(false, 'Incorrect password or email.');
     }
 }
 

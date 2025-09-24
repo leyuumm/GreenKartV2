@@ -719,27 +719,24 @@ if (isset($_POST['login'])) {
             </div>
             
             <form id="loginForm" class="modal-form">
-                <form method="post" class="modal-form">
-                    <div class="form-group">
-                        <label class="form-label">Email</label>
-                        <input type="email" name="email" class="form-input" placeholder="Enter your email" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Password</label>
-                        <input type="password" name="password" class="form-input" placeholder="Enter your password" required>
-                    </div>
-                    <div class="form-row">
-                        <label class="checkbox-label">
-                            <input type="checkbox" class="form-checkbox">
-                            <span class="checkbox-text">Remember me</span>
-                        </label>
-                        <a href="#" class="forgot-link">Forgot password?</a>
-                    </div>
-                    <?php if (!empty($loginError)): ?>
-                        <div class="error-message"><?= $loginError ?></div>
-                    <?php endif; ?>
-                    <button type="submit" name="login" class="btn-primary">Sign In</button>
-                </form>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" name="email" class="form-input" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" name="password" class="form-input" placeholder="Enter your password" required>
+                </div>
+                <div class="form-row">
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox">
+                        <span class="checkbox-text">Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+                <div id="loginError" class="error-message d-none"></div>
+                <button type="submit" class="btn-primary">Sign In</button>
+            </form>
             
             <div class="modal-footer">
                 <p class="switch-text">Don't have an account? 
